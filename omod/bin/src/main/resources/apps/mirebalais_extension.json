@@ -1,0 +1,113 @@
+[
+    {
+        "id": "mirebalais.configureStandardHeader",
+        "extensionPointId": "org.openmrs.module.appui.header.config",
+        "type": "config",
+        "extensionParams": {
+            "logo-icon-url": "/ms/uiframework/resource/mirebalais/images/partners_in_health_logo.png"
+        }
+    },
+    {
+        "id": "emr.archivesRoom",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "emr.app.archivesRoom.label",
+        "url": "emr/paperrecord/archivesRoom.page",
+        "icon": "icon-folder-open",
+        "order": 1,
+        "requiredPrivilege": "App: emr.archivesRoom"
+    },
+    {
+        "id": "legacy.admin",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.legacy.admin.label",
+        "url": "admin/index.htm",
+        "icon": "icon-cogs",
+        "order": 9,
+        "requiredPrivilege": "App: legacy.admin"
+    },
+    {
+        "id": "patientRegistration.registration",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.patientRegistration.registration.label",
+        "url": "mirebalais/patientRegistration/appRouter.page?task=patientRegistration",
+        "icon": "icon-register",
+        "order": 8,
+        "requiredPrivilege": "App: patientregistration.main"
+    },
+    {
+        "id": "mirebalais.mpi",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.mpi.title",
+        "url": "mirebalais/mpi/findPatient.page",
+        "icon": "icon-zoom-in",
+        "order": 12,
+        "requiredPrivilege": "App: mirebalais.mpi"
+    },
+    {
+        "id": "mirebalais.checkin",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.checkin.title",
+        "url": "mirebalais/checkin/findPatient.page",
+        "icon": "icon-paste",
+        "order": 6,
+        "requiredPrivilege": "App: mirebalais.checkin"
+    },
+    {
+        "id": "patientRegistration.checkin",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.patientRegistration.checkin.label",
+        "url": "mirebalais/patientRegistration/appRouter.page?task=primaryCareReception",
+        "icon": "icon-user-md",
+        "order": 10,
+        "requiredPrivilege": "App: patientregistration.main"
+    },
+    {
+        "id": "patientRegistration.emergencyCheckin",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.patientRegistration.emergencyCheckin.label",
+        "url": "mirebalais/patientRegistration/appRouter.page?task=edCheckIn",
+        "icon": "icon-hospital",
+        "order": 5,
+        "requiredPrivilege": "App: patientregistration.main",
+        "extensionParams": {
+            "featureToggle": "emergencyCheckin"
+        }
+    },
+    {
+        "id": "patientRegistration.lookup",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.patientRegistration.patientLookup.label",
+        "url": "mirebalais/patientRegistration/appRouter.page?task=patientLookup",
+        "icon": "icon-edit",
+        "order": 7,
+        "requiredPrivilege": "App: patientregistration.edit"
+    },
+    {
+        "id": "mirebalais.outpatientVitals",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.outpatientVitals.title",
+        "url": "mirebalais/outpatientvitals/findPatient.page",
+        "icon": "icon-vitals",
+        "order": 11,
+        "requiredPrivilege": "App: mirebalais.outpatientVitals"
+    },
+    {
+        "id": "registrationapp.registerPatient",
+        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+        "type": "link",
+        "label": "mirebalais.app.patientRegistration.registration.label",
+        "url": "registrationapp/registerPatient.page",
+        "icon": "icon-register",
+        "order": 13,
+        "requiredPrivilege": "App: registrationapp.registerPatient"
+    }
+]

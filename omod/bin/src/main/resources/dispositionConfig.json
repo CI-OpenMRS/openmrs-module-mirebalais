@@ -1,0 +1,121 @@
+[
+    {
+        "uuid": "admitToHospital",
+        "name": "disposition.emrapi.admitToHospital",
+        "conceptCode": "PIH:ADMIT TO HOSPITAL",
+        "actions": [
+            "admitToSpecificLocationDispositionAction"
+        ],
+        "clientSideActions": [
+            {
+                "action": "include-fragment",
+                "module": "emr",
+                "fragment": "field/location",
+                "fragmentConfig": {
+                    "id": "admitToHospital",
+                    "formFieldName": "admitToLocationId",
+                    "label": "disposition.emrapi.admitToHospital.admissionLocation",
+                    "withTag": "Admission Location",
+                    "classes": ["required"]
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "discharge",
+        "name": "disposition.emrapi.discharge",
+        "conceptCode": "PIH:DISCHARGED",
+        "actions": [
+            "dischargeIfAdmittedDispositionAction"
+        ],
+        "clientSideActions": []
+    },
+    {
+        "uuid": "markPatientDead",
+        "name": "disposition.emrapi.death",
+        "conceptCode": "PIH:DEATH",
+        "actions": [
+            "dischargeIfAdmittedDispositionAction",
+            "closeCurrentVisitDispositionAction",
+            "markPatientDeadDispositionAction"
+        ],
+        "clientSideActions": [
+            {
+                "action": "include-fragment",
+                "module": "uicommons",
+                "fragment": "field/datetimepicker",
+                "fragmentConfig": {
+                    "id": "deathDate",
+                    "useTime": false,
+                    "formFieldName": "deathDate",
+                    "label": "disposition.emrapi.death.deathDate",
+                    "defaultToday": true,
+                    "endToday": true,
+                    "classes": [ "required" ]
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "leftWithoutSeeingAClinician",
+        "name": "disposition.emrapi.leftWithoutSeeingAClinician",
+        "conceptCode": "PIH:Left without seeing a clinician",
+        "actions": [
+            "dischargeIfAdmittedDispositionAction"
+        ],
+        "clientSideActions": []
+    },
+    {
+        "uuid": "leftWithoutCompletionOfTreatment",
+        "name": "disposition.emrapi.leftWithoutCompletionOfTreatment",
+        "conceptCode": "PIH:Departed without medical discharge",
+        "actions": [
+            "dischargeIfAdmittedDispositionAction"
+        ],
+        "clientSideActions": []
+    },
+    {
+        "uuid": "transferOutOfHospital",
+        "name": "disposition.emrapi.transferOutOfHospital",
+        "conceptCode": "PIH:Transfer out of hospital",
+        "actions": [
+            "addObsToGroupDispositionAction",
+            "dischargeIfAdmittedDispositionAction"
+        ],
+        "clientSideActions": [
+            {
+                "action": "include-fragment",
+                "module": "mirebalais",
+                "fragment": "field/sites",
+                "fragmentConfig": {
+                    "id": "transferOutOfHospital",
+                    "formFieldName": "valueCoded",
+                    "label": "disposition.emrapi.transferOutOfHospital.sites",
+                    "classes": [ "required" ]
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "transferWithinHospital",
+        "name": "disposition.emrapi.transferInHospital",
+        "conceptCode": "PIH:Transfer within hospital",
+        "actions": [
+            "transferToSpecificLocationDispositionAction"
+        ],
+        "clientSideActions": [
+            {
+                "action": "include-fragment",
+                "module": "emr",
+                "fragment": "field/location",
+                "fragmentConfig": {
+                    "id": "transferWithinHospital",
+                    "formFieldName": "transferToLocationId",
+                    "label": "disposition.emrapi.transferInHospital.transferToLocation",
+                    "withTag": "Admission Location",
+                    "classes": [ "required" ]
+                }
+            }
+        ]
+    }
+]

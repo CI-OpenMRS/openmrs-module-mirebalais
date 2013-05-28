@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+    <id>${project.parent.artifactId}</id>
+    <name>${project.parent.name}</name>
+    <version>${project.parent.version}</version>
+    <package>
+        ${project.parent.groupId}.${project.parent.artifactId}
+    </package>
+    <author>PIH</author>
+    <description>
+        ${project.parent.description}
+    </description>
+    <updateURL>
+        https://dev.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf
+    </updateURL>
+
+    <!--<require_version>${openMRSVersion}</require_version>-->
+    <require_version>1.9.2</require_version>
+
+    <require_modules>
+        <require_module version="${mirebalaismetadataVersion}">
+            org.openmrs.module.mirebalaismetadata
+        </require_module>
+        <require_module version="${uiframeworkVersion}">
+            org.openmrs.module.uiframework
+        </require_module>
+        <require_module version="${appframeworkVersion}">
+            org.openmrs.module.appframework
+        </require_module>
+        <require_module version="${metadatasharingVersion}">
+            org.openmrs.module.metadatasharing
+        </require_module>
+        <require_module version="${htmlformentryVersion}">
+            org.openmrs.module.htmlformentry
+        </require_module>
+        <require_module version="${htmlformentry19extVersion}">
+            org.openmrs.module.htmlformentry19ext
+        </require_module>
+        <require_module version="${calculationVersion}">
+            org.openmrs.calculation
+        </require_module>
+        <require_module version="${reportingVersion}">
+            org.openmrs.module.reporting
+        </require_module>
+        <require_module version="${idgenVersion}">
+            org.openmrs.module.idgen
+        </require_module>
+        <require_module version="${patientregistrationVersion}">
+            org.openmrs.module.patientregistration
+        </require_module>
+        <require_module version="${namephoneticsVersion}">
+            org.openmrs.module.namephonetics
+        </require_module>
+        <require_module version="${pacsintegrationVersion}">
+            org.openmrs.module.pacsintegration
+        </require_module>
+        <require_module version="${providerManagementVersion}">
+            org.openmrs.module.providermanagement
+        </require_module>
+        <require_module version="${importpatientfromwsVersion}">
+            org.openmrs.module.importpatientfromws
+        </require_module>
+        <require_module version="${uicommonsVersion}">
+            org.openmrs.module.uicommons
+        </require_module>
+        <require_module version="${radiologyappVersion}">
+            org.openmrs.module.radiologyapp
+        </require_module>
+    </require_modules>
+
+    <activator>
+        ${project.parent.groupId}.${project.parent.artifactId}.MirebalaisHospitalActivator
+    </activator>
+
+    <mappingFiles>
+    </mappingFiles>
+
+    <!-- All message codes should start with ${project.parent.artifactId}. -->
+    <messages>
+        <lang>en</lang>
+        <file>messages.properties</file>
+    </messages>
+    <messages>
+        <lang>fr</lang>
+        <file>messages_fr.properties</file>
+    </messages>
+    <messages>
+        <lang>ht</lang>
+        <file>messages_ht.properties</file>
+    </messages>
+
+    <!-- Global Properties -->
+    <globalProperty>
+        <property>mirebalais.installedAddressHierarchyVersion</property>
+        <defaultValue>0</defaultValue>
+        <description>
+            Used to track what version of the address hierarchy is installed on the system
+        </description>
+    </globalProperty>
+
+
+</module>
+

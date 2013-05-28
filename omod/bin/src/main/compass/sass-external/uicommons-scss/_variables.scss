@@ -1,0 +1,26 @@
+//fonts
+$primaryFont: "OpenSans";
+$primaryBoldFont: "OpenSansBold";
+$primaryLightFont: "OpenSansLight";
+$primaryItalicFont: "OpenSansItalic";
+$iconFont: "FontAwesome";
+$fontPath: "../../fonts";
+
+//colors
+$alertBackground: #FFFDF0;
+$bodyBackground: #EEE;
+
+$white: #FFFFFF;
+$black: #000000;
+$darkerGrey: #BBB;
+
+//openMrs colors
+$highlight: darken(#009384, 15%);
+$text: darken(#5B57A6, 20%);
+
+$link: #007FFF;
+$focus: #FFFDF7;
+
+$success: #A1D030;
+$alert: #FFA000;
+$error: #C41230;
